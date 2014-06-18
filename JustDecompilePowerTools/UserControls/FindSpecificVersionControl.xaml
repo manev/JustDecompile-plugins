@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="JustDecompile.Plugins.JustDecompilePowerTools.UserControls.FindSpecificVersionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008">
+
+    <UserControl.Resources>
+        <DataTemplate x:Key="listBoxTemplate">
+            <Grid>
+                <Border BorderBrush="Gray" BorderThickness=".3" Margin="0 0 0 3">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Reference:  " FontWeight="Black" />
+                            <TextBlock Text="{Binding AssemblyNameReference.FullName}" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Assembly:  " FontWeight="Black" />
+                            <TextBlock Text="{Binding AssemblyDefinition.Name.Name}" />
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <Grid Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Height="20"
+              VerticalAlignment="Top"
+              Background="#FFC1DBFC">
+
+            <Button x:Name="btnClose"
+                    Grid.Column="1"
+                    Margin="0 2 4 0"
+                    Click="OnCloseClicked"
+                    HorizontalAlignment="Right"
+                    Cursor="Hand">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Opacity" Value=".8" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Grid x:Name="root">
+                                        <ContentPresenter />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="1" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Opacity" Value=".8" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+                
+                <Image Width="13"
+                       Height="13"
+                       Source="../Images/gray_close_button.png" />
+            </Button>
+        </Grid>
+
+        <Grid Margin="0 2 0 0" Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+
+            <Grid HorizontalAlignment="Left" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Enter assembly version or assembly full name: " />
+
+                <TextBox x:Name="txtTargetAssembly" Width="400" Grid.Column="1" />
+
+                <Button Content="Search" Click="OnSearchClick" Width="70" Margin="5 0 0 0" Grid.Column="2" />
+            </Grid>
+
+            <ListBox x:Name="listAssemblies" Grid.Row="1" ItemTemplate="{StaticResource listBoxTemplate}" />
+
+        </Grid>
+    </Grid>
+
+</UserControl>
