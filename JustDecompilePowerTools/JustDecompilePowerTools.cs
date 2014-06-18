@@ -17,7 +17,7 @@ namespace JustDecompile.Plugins.JustDecompilePowerTools
 {
     [ModuleExport(typeof(JustDecompilePowerTools))]
     public partial class JustDecompilePowerTools : IModule
-    {
+    { 
 #pragma warning disable 0649
 
         [Import]
