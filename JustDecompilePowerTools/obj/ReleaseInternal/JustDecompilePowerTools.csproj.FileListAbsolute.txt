@@ -1,6 +1,0 @@
-C:\Builds\245\Behemoth\JustDecompile Plugins Build\Sources\Source\UI\ReleaseBuild\Plugins\JustDecompilePowerTools\PluginConfig.xml
-C:\Builds\245\Behemoth\JustDecompile Plugins Build\Sources\Source\UI\ReleaseBuild\Plugins\JustDecompilePowerTools\JustDecompilePowerTools.Module.dll
-C:\Builds\245\Behemoth\JustDecompile Plugins Build\Sources\Source\UI\ReleaseBuild\Plugins\JustDecompilePowerTools\JustDecompilePowerTools.Module.pdb
-C:\Builds\245\Behemoth\JustDecompile Plugins Build\Sources\JustDecompile Plugins\JustDecompilePowerTools\obj\ReleaseInternal\ResolveAssemblyReference.cache
-C:\Builds\245\Behemoth\JustDecompile Plugins Build\Sources\JustDecompile Plugins\JustDecompilePowerTools\obj\ReleaseInternal\JustDecompilePowerTools.Module.dll
-C:\Builds\245\Behemoth\JustDecompile Plugins Build\Sources\JustDecompile Plugins\JustDecompilePowerTools\obj\ReleaseInternal\JustDecompilePowerTools.Module.pdb

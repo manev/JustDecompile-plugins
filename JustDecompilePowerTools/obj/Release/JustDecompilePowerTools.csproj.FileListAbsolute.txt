@@ -1,9 +1,0 @@
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\bin\Release\PluginConfig.xml
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\bin\Release\JustDecompilePowerTools.Module.dll
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\bin\Release\JustDecompilePowerTools.Module.pdb
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\obj\Release\UserControls\FindSpecificVersionControl.baml
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\obj\Release\UserControls\FindSpecificVersionControl.g.cs
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\obj\Release\JustDecompilePowerTools.Module_MarkupCompile.cache
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\obj\Release\JustDecompilePowerTools.Module.g.resources
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\obj\Release\JustDecompilePowerTools.Module.dll
-C:\Users\manev\Desktop\justdecompile-powertools-plugin-source\JustDecompilePowerTools\obj\Release\JustDecompilePowerTools.Module.pdb
