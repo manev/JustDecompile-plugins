@@ -85,6 +85,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
@@ -93,9 +94,12 @@
                 <TextBox x:Name="txtTargetAssembly" Width="400" Grid.Column="1" />
 
                 <Button Content="Search" Click="OnSearchClick" Width="70" Margin="5 0 0 0" Grid.Column="2" />
+                
+                <Button Content="Clear" Click="OnClearClick" Width="70" Margin="5 0 0 0" Grid.Column="3" />
             </Grid>
 
-            <ListBox x:Name="listAssemblies" Grid.Row="1" ItemTemplate="{StaticResource listBoxTemplate}" />
+            <ListBox x:Name="listAssemblies" MouseDoubleClick="OnDoubleClick"
+                     Grid.Row="1" ItemTemplate="{StaticResource listBoxTemplate}" />
 
         </Grid>
     </Grid>

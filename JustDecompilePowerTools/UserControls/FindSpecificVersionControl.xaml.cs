@@ -4,6 +4,7 @@ using JustDecompile.API.Core.Services;
 using Microsoft.Practices.Prism.Events;
 using Microsoft.Practices.Prism.Regions;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,6 +45,8 @@ namespace JustDecompile.Plugins.JustDecompilePowerTools.UserControls
 
         private void OnSearchClick(object sender, RoutedEventArgs e)
         {
+            this.listAssemblies.Items.Clear();
+
             if (this.treeViewItems == null)
             {
                 return;
@@ -76,6 +79,21 @@ namespace JustDecompile.Plugins.JustDecompilePowerTools.UserControls
             {
                 pluginRegion.Remove(this);
             }
+        }
+
+        private void OnDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var selectedItem = this.listAssemblies.SelectedItem as AssemblyDefinitionToRefAssembly;
+
+            if (selectedItem != null)
+            {
+                Process.Start("explorer.exe", "/select, " + selectedItem.AssemblyDefinition.MainModule.FilePath);
+            }
+        }
+
+        private void OnClearClick(object sender, RoutedEventArgs e)
+        {
+            this.listAssemblies.Items.Clear();
         }
 
         private class AssemblyDefinitionToRefAssembly
