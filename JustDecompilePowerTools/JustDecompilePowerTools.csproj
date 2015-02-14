@@ -42,7 +42,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>D:\work\Behemoth\Trunk\Source\UI\ReleaseBuild\Plugins\JustDecompilePowerTools\</OutputPath>
+    <OutputPath>C:\Telerik\JustDecompile\Libraries\Plugins\JustDecompilePowerTools\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>

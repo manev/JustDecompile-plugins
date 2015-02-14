@@ -27,15 +27,22 @@ namespace JustDecompile.Plugins.JustDecompilePowerTools
         public void OnImportsSatisfied()
         {
             var menuItem = new MenuItem("Find references assemblies", new DelegateCommand(OnFindRefAssemblyExecuted));
+            var findResouraceItem = new MenuItem("Find resource", new DelegateCommand(OnFindResourceExecuted));
 
             //var fullScreenMenuItem = new MenuItem("Full screen", new DelegateCommand(OnFullScreenCommandExecuted));
 
             this.regionManager.AddToRegion("ToolMenuRegion", menuItem);
+            this.regionManager.AddToRegion("ToolMenuRegion", findResouraceItem);
 
             if (findSpecificVersionControl == null)
             {
-                findSpecificVersionControl = new FindSpecificVersionControl(eventAggregator, navigationService, regionManager);
+                findSpecificVersionControl = new FindSpecificVersionControl(eventAggregator, regionManager);
             }
+        }
+
+        private void OnFindResourceExecuted()
+        {
+            regionManager.AddToRegion(CODEVIEWER_AREA, findSpecificVersionControl);
         }
 
         private void OnFindRefAssemblyExecuted()

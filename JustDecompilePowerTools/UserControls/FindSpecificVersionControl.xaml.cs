@@ -17,8 +17,6 @@ namespace JustDecompile.Plugins.JustDecompilePowerTools.UserControls
 
         private IEventAggregator eventAggregator;
 
-        private ITreeViewNavigatorService navigationService;
-
         private IRegionManager regionManager;
 
         public FindSpecificVersionControl()
@@ -26,12 +24,10 @@ namespace JustDecompile.Plugins.JustDecompilePowerTools.UserControls
             InitializeComponent();
         }
 
-        public FindSpecificVersionControl(IEventAggregator eventAggregator, ITreeViewNavigatorService navigationService, IRegionManager regionManager)
+        public FindSpecificVersionControl(IEventAggregator eventAggregator, IRegionManager regionManager)
             : this()
         {
             this.eventAggregator = eventAggregator;
-
-            this.navigationService = navigationService;
 
             this.regionManager = regionManager;
 
