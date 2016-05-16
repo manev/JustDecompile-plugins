@@ -7,6 +7,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugInternal|AnyCPU'">
     <OutputPath>..\..\Source\UI\DebugBuild\Plugins\JustDecompilePowerTools\</OutputPath>
@@ -14,6 +15,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -30,7 +32,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>JustDecompile.Plugins.JustDecompilePowerTools</RootNamespace>
     <AssemblyName>JustDecompilePowerTools.Module</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SccProjectName>SAK</SccProjectName>
@@ -42,7 +44,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Telerik\JustDecompile\Libraries\Plugins\JustDecompilePowerTools\</OutputPath>
+    <OutputPath>obj\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -59,8 +61,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="JustDecompile.API">
-      <HintPath>D:\work\Behemoth\Trunk\Source\UI\ReleaseBuild\JustDecompile.API.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\Telerik\JustDecompile\Libraries\JustDecompile.API.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
